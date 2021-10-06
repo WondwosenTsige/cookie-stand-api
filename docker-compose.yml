@@ -1,3 +1,6 @@
+
+
+
 version: '3'
 
 services:
@@ -9,3 +12,27 @@ services:
       - .:/code
     ports:
       - '8000:8000'
+
+
+# version: '3'
+
+# services:
+#   web:
+#     build: .
+#     command: gunicorn cookie_stand_api.wsgi:application --bind 0.0.0.0:8000 --workers 4
+#     volumes:
+#       - .:/code
+#     ports:
+#       - 8000:8000
+#     depends_on:
+#       - db
+#   db:
+#     image: postgres:11
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data/
+#     environment:
+#       - POSTGRES_DB=${POSTGRES_DB}
+#       - POSTGRES_USER=${POSTGRES_USER}
+#       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+# volumes:
+#   postgres_data:
