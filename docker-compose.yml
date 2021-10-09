@@ -1,6 +1,4 @@
 
-
-
 version: '3'
 
 services:
@@ -11,9 +9,10 @@ services:
     volumes:
       - .:/code
     ports:
-      - '8000:8000'
+      - 8000:8000
 
 
+        # The code below may be useful during aws deployment
 # version: '3'
 
 # services:

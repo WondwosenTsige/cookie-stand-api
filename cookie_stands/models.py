@@ -17,7 +17,7 @@ class CookieStand(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.location
 
     def save(self, *args, **kwargs):
 
